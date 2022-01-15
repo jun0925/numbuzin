@@ -11,6 +11,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -77,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-
+        System.out.println("token : "+ FirebaseInstanceId.getInstance().getToken());
         mWebView.loadUrl("https://m.numbuzin.com/");
     }
 
